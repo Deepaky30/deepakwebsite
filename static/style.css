@@ -1,0 +1,352 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #440909; /* Slightly darker blue for contrast */
+}
+
+/* Navigation Bar Styling */
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 18px 05px;
+    font-size: 18px;
+    background-color: #000000; /* Slightly darker blue for contrast */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(224, 5, 5, 0.2);
+}
+
+header nav a {
+    text-decoration: none;
+    color: rgb(250, 248, 243);
+    font-weight: bold;
+    transition: color 0.3s;
+    margin: 0 15px;
+}
+
+header nav a:hover {
+    color: #0fffcb; /* fav color */
+}
+
+.background-section {
+    background: linear-gradient(rgba(20, 8, 8, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('/static/images/deepak1.jpg');
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: 25% center; /* Center the image both horizontally and vertically */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-blend-mode: normal; /* Ensure gradient effect applies */
+    color: white; /* Text remains visible */
+}
+
+
+/* Ensure content inside is styled correctly */
+.background-section h1, .background-section h2, .background-section p {
+    text-align: center;
+}
+
+.background-section {
+    padding-bottom: 50px; /* Adjust this value as needed */
+}
+
+
+
+/* Title Section Styling */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100vh - 60px); /* Adjust height to account for header */
+    margin-top: 60px; /* Push down below fixed header */
+    padding-bottom: 100px; /* Ensure footer doesn't overlap */
+
+}
+
+/* Main Title Styling (Deepak Yadav) */
+main h1 {
+    font-family: 'Bebas Neue', sans-serif; /* Clean and bold font */
+    font-size: 5em; /* Large, prominent text */
+    font-weight: bold;
+    text-align: center; /* Center the text */
+    margin: 0;
+    letter-spacing: 3px; /* Sleek spacing between letters */
+    text-transform: uppercase; /* All caps for a bold statement */
+    color: transparent; /* Make the text transparent to show gradient */
+    background-image: linear-gradient(90deg, #E50914, #F40612, #E50914); /* Netflix-inspired red gradient */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    background-clip: text; /* Ensure gradient applies only to text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    animation: netflix-fade 3s infinite; /* Smooth gradient shift animation */
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+main h1:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8); /* Enhance shadow on hover */
+}
+
+/* Netflix-like text gradient animation */
+@keyframes netflix-fade {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+main h2 {
+    font-size: 1em; /* Smaller font size for the tagline */
+    margin-top: 5px; /* Slight space below the name */
+    margin-left: 52%;
+    font-weight: 300; /* Light font weight for tagline */
+    font-style: italic; /* Adds a novel-like style */
+    color: #5ff5d7; 
+    text-transform: none; /* Keeps the original capitalization */
+}
+
+/* Center the text beautifully */
+main h1, main h2 {
+    line-height: 1.2; /* Adds spacing between lines for readability */
+    text-align: center;
+}
+
+/* About, Projects, and Contact Section Styling */
+section {
+    padding: 30px 15px;
+    padding-top: 5%;
+    padding-bottom: 20%;
+    max-width: 900px;
+    margin: 100px auto;
+    color: white; /* White text for both headings and paragraphs */
+    text-align: center; /* Center-align the headings */
+    background-color: transparent; /* Remove the background box */
+    box-shadow: none; /* Remove the shadow effect */
+    border-radius: 0; /* Remove rounded corners */
+}
+
+/* Styling for Headings */
+section h2 {
+    font-size: 2em; /* Adjust the size for the headings */
+    margin-bottom: 10px; /* Space below the heading */
+    text-transform: uppercase; /* Optional: Uppercase for headings */
+    text-align: center;
+    margin-left: 0;
+    font-style: normal; 
+    color: #f1faf8; 
+}
+
+/* Styling for Paragraphs */
+section p {
+    font-size: 1em; /* Adjust paragraph font size */
+    line-height: 1.6; /* Improve readability */
+    margin-top: 10px; /* Space above the paragraph */
+    text-align: center; /* Align paragraph text to the left */
+}
+
+/* My Work Section Styling */
+#work {
+    padding: 30px 15px;
+    padding-top: 70px;
+    padding-bottom: 5%; /* Adjust padding to control spacing */
+    max-width: 100%; /* Ensure the section spans the full width */
+    margin: 0 auto; /* Center the section horizontally */
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(20, 8, 8, 0.5), rgba(0, 0, 0, 0.5)), url('/static/images/view.jpg');
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-blend-mode: overlay; /* Optional: Subtle blend effect */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-attachment: fixed; /* Optional: To create a parallax effect */
+}
+
+
+#work h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#work p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Logo Container Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Space between logos */
+    flex-wrap: wrap; /* Wrap logos to the next row if needed */
+    padding: 20px; /* Add some spacing around the container */
+}
+
+/* Logo Image Styling */
+.logo-container img {
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height to make them uniform */
+    border-radius: 80%; /* Make the logos circular */
+    object-fit: contain; /* Ensure the logos fit well inside the circle */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth animation effects */
+    border: 2px solid #c4aeae; /* Optional: Add a subtle border */
+    background-color: white; /* Optional: Background for transparency issues */
+}
+
+/* Hover Effect for Logos */
+.logo-container img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    filter: brightness(1.2); /* Brightness effect on hover */
+}
+
+
+#Projects {
+    padding: 30px 15px;
+    padding-top: 70px;
+    padding-bottom: 30%; /* Adjust padding to control spacing */
+    max-width: 100%; /* Ensure the section spans the full width */
+    margin: 0 auto; /* Center the section horizontally */
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(20, 8, 8, 0.5), rgba(0, 0, 0, 0.5)), url('/static/images/view.jpg');
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-blend-mode: overlay; /* Optional: Subtle blend effect */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-attachment: fixed; /* Optional: To create a parallax effect */
+}
+
+#contact h2 {
+    font-size: 2em; /* Adjust the size for the headings */
+    margin-bottom: 10px; /* Space below the heading */
+    text-transform: uppercase; /* Optional: Uppercase for headings */
+    text-align: center;
+    margin-left: 0;
+    font-style: normal; 
+    color: #f1faf8; 
+}
+
+
+#contact {
+    padding: 50px 15px;
+    padding-bottom: 5%; /* Adjust padding to control spacing */
+    max-width: 100%; /* Ensure the section spans the full width */
+    margin: 0 auto; /* Center the section horizontally */
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(20, 8, 8, 0.5), rgba(0, 0, 0, 0.5)), url('/static/images/view.jpg');
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-blend-mode: overlay; /* Subtle blend effect */
+    background-repeat: no-repeat; /* Prevent repetition */
+    background-attachment: fixed; /* Optional: To create a parallax effect */
+}
+
+/* Form Styling */
+form {
+    width: 30%; /* Reduce form width for compact look */
+    margin: 0 auto; /* Center the form */
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.85); /* Add slight transparency */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    backdrop-filter: blur(10px); /* Subtle blur effect */
+    text-align: left; /* Align text to the left inside the form */
+}
+
+/* Label inside inputs */
+form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+form input, form textarea {
+    width: 100%; /* Make inputs span the full width */
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensures padding and borders are included in the width */
+}
+
+/* Styling for Labels */
+form label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 0.9em;
+    color: #666;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Focus effect for inputs and textarea */
+form input:focus, form textarea:focus {
+    border-color: #06075e;
+    outline: none;
+}
+
+form input:focus + label, 
+form textarea:focus + label, 
+form input:not(:placeholder-shown) + label, 
+form textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 0.75em;
+    color: #06075e;
+}
+
+/* Button Styling */
+form button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #ffcc00; /* Gold */
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 8px 0; /* Reduced padding */
+    margin-top: 3px;
+    position: relative;
+    bottom: 0;
+    height: auto; /* Automatically adjust height based on content */
+    width: 100%;
+    font-size: 1em; /* Reduced font size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
